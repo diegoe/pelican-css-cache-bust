@@ -1,6 +1,6 @@
 [project]
 name = "pelican-css-cache-bust"
-version = "0.1.0"
+version = "0.2.0"
 description = "Calculate a CSS_FILE_CACHE_BUST value to use as cache bust query strings"
 readme = "README.md"
 authors = [
