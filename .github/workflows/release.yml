@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     environment: release
     permissions:
@@ -32,21 +32,5 @@ jobs:
       run: |
         python3 -m build
 
-    - name: Sign the dists with Sigstore
-      uses: sigstore/gh-action-sigstore-python@v2.1.1
-      with:
-        inputs: |
-          ./dist/*.tar.gz
-          ./dist/*.whl
-
-    - name: Upload artifact signatures
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-      run: |
-        gh release upload '${{ github.ref_name }}' dist/** --repo '${{ github.repository }}'
-
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        repository-url: https://test.pypi.org/legacy/
-
