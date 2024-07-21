@@ -1,5 +1,5 @@
 [project]
-name = "css_cache_bust"
+name = "pelican-css-cache-bust"
 version = "0.1.0"
 description = "Calculate a CSS_FILE_CACHE_BUST value to use as cache bust query strings"
 readme = "README.md"
@@ -31,9 +31,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/diegoe/css_cache_bust"
-Issues = "https://github.com/diegoe/css_cache_bust/issues"
-Repository = "https://github.com/diegoe/css_cache_bust.git"
+Homepage = "https://github.com/diegoe/pelican-css-cache-bust"
+Issues = "https://github.com/diegoe/pelican-css-cache-bust/issues"
+Repository = "https://github.com/diegoe/pelican-css-cache-bust.git"
 
 [project.optional-dependencies]
 dev = [
