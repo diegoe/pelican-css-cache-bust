@@ -1,4 +1,4 @@
-# css_cache_bust
+# pelican-css-cache-bust
 A Pelican plugin to append a cache buster query string to your `CSS_FILE`.
 
 ## Set up
@@ -16,6 +16,8 @@ A Pelican plugin to append a cache buster query string to your `CSS_FILE`.
 CSS_FILE = "css/main.css"
 THEME = "custom_theme"
 THEME_STATIC_PATHS = ["static", "other"]
+# You can explicitly enable this plugin. Note this disables auto discovery
+# PLUGINS = ["css_cache_bust"]
 ```
 
 Pelican will resolve `THEME` to a full path and the plugin will search
