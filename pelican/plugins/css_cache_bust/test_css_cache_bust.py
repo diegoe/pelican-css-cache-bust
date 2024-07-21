@@ -1,14 +1,18 @@
+"""Test css_cache_bust."""
 import hashlib
 import os
 import random
-from tempfile import NamedTemporaryFile, TemporaryDirectory
 import unittest
+from tempfile import NamedTemporaryFile, TemporaryDirectory
 
 from .css_cache_bust import _get_css_file_hash, create_css_cache_bust
 
 
 class TestCssCacheBust(unittest.TestCase):
+    """Basic test suite for css_cache_bust."""
+
     def setUp(self):
+        """Set all the temp files."""
         self.tmp_theme_dir = TemporaryDirectory(delete=False)
 
         # Create some directories under the theme dir to test searching
@@ -97,6 +101,7 @@ class TestCssCacheBust(unittest.TestCase):
         )
 
     def tearDown(self):
+        """Cleanup all temp files."""
         os.remove(self.tmp_css_file.name)
 
         for d in self.tmp_static_paths:
